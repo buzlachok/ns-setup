@@ -45,9 +45,16 @@ services:
       ### Features
       # ENABLE - Used to enable optional features, expects a space delimited list, such as: careportal rawbg iob
       # See https://github.com/nightscout/cgm-remote-monitor#plugins for details
-      ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover bgi food rawbg
+      DEVICESTATUS_ADVANCED: true
+      ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover bgi food rawbg careportal
+      OPENAPS_FIELDS: status-symbol status-label iob meal-assist rssi
+      OPENAPS_RETRO_FIELDS: status-symbol status-label iob meal-assist rssi
+      SHOW_PLUGINS: openaps pump iob sage cage iage bage careportal basal bwp cob
+      SHOW_RAWBG: noise
+      THEME: colors
+      LANGUAGE: ru
       SHOW_FORECAST: openaps
-      PUMP_FIELDS: clock reservoir
+      PUMP_FIELDS: clock reservoir battery
       DISPLAY_UNITS: mmol
 
       # AUTH_DEFAULT_ROLES (readable) - possible values readable, denied, or any valid role name.
